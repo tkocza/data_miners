@@ -236,7 +236,7 @@ text: str(int(age.value))
 
 Your app should looks like that:
 - WelcomeScreen:
-![](/assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
+![](../assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
 
 - SurveyScreen
 ![](pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
