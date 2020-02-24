@@ -219,10 +219,15 @@ As you can see, you are able to nested Layouts (in this case BoxLayout) to adjus
 A few more words about above Wigedts:
 - Slider - min, max i step sounds clear, but you were able to set a value from and to text input below by:
 
-        value: int(age_as_txt.text)
-        
+```python
+value: int(age_as_txt.text)
+```  
+
 and
-        text: str(int(age.value))   
+
+```python
+text: str(int(age.value))
+```      
 
 *age_as_txt* and *age* are Wigdets ids, so you can call parameters in other object
    
@@ -231,10 +236,10 @@ and
 
 Your app should looks like that:
 - WelcomeScreen:
-![](/assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
+![](data_miners/assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
 
 - SurveyScreen
-![](/assets/img/pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
+![](data_miners/assets/img/pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
 
 If you are interested how to work with values from survey fields and write down them into a file please check 
 Multipages application with survey tutorial in Kivy (part 2)
