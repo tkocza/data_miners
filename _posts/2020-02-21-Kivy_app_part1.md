@@ -236,10 +236,10 @@ text: str(int(age.value))
 
 Your app should looks like that:
 - WelcomeScreen:
-![](data_miners/assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
+![](/assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
 
 - SurveyScreen
-![](data_miners/assets/img/pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
+![](pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
 
 If you are interested how to work with values from survey fields and write down them into a file please check 
 Multipages application with survey tutorial in Kivy (part 2)
