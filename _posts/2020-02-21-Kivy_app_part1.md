@@ -239,7 +239,7 @@ Your app should looks like that:
 ![](../../assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
 
 - SurveyScreen
-![](../pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
+![](../../assets/img/pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
 
 If you are interested how to work with values from survey fields and write down them into a file please check 
 Multipages application with survey tutorial in Kivy (part 2)
