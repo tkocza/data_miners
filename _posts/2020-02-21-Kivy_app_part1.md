@@ -1,9 +1,11 @@
 ---
-title: "Multipages application with survey in Kivy (part 1)"
+title: Multipages application with survey in Kivy (part 1)
 date: 2020-02-11 00:00:00 +0800
 categories: [Tutorials, kivy]
 tags: [Python, Kivy, GUI]
 toc: false
+seo:
+  date_modified: 2020-02-24 23:38:51 +0100
 ---
 
 Kivy is one of the python libraries for building GUI. It is relatively new package, but the community is still growing.  
