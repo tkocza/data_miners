@@ -8,26 +8,27 @@ seo:
   date_modified: 2020-02-24 23:38:51 +0100
 ---
 
-Kivy is one of the python libraries for building GUI. It is relatively new package, but the community is still growing.  
+Kivy is one of the python libraries for building GUI. It is relatively new package but its community is still growing.  
 
 ### Why kivy?
-Main advantage of Kivy is MIT licence, which allows you use it without any payment. I know that PyQT is much more mature framework, but if you want to use it for commercial solution you have to consider license purchase. Also you can create executable file for any of platform (Windows, Mac, iOS, Android, Raspberry Pi). In my opinion documentation could be written better, but I hope one day it will happen.    
+Main advantage of Kivy is MIT licence, which allows you to use it without any payment. I know that PyQT is more mature framework but if you want to use it for commercial solution you have to consider a license purchase. Also you can create executable file on every of platforms (Windows, Mac, iOS, Android, Raspberry Pi). In my opinion kivy documentation could have been written better but I hope one day it will be improved.    
 
-## Let's
-First of all is installation process. Please follow carefully by point in guide:
+## Let's start
+First of all, you have to install the framework. Please follow carefully each point in a proper guide:
 * Linux - https://kivy.org/doc/stable/installation/installation-linux.html
 * Windows - https://kivy.org/doc/stable/installation/installation-windows.html
 * Mac - https://kivy.org/doc/stable/installation/installation-osx.html
  
 > **Note** Currently Kivy supports Python <= 3.7 
 
-You have to ways how to create a GUI:
+You have two ways of creating a GUI:
 1) declare widget classes in a "pure" python code
 2) create separated .kv file
 
-I recommend second option, because regarding to MVC (model-view-controller) design pattern.
+I recommend second option compatible with MVC (model-view-controller) design pattern.
 
-Everything what you build is put on **canva** and every of screens in your app has their own. It is your root. All of components, which you can put into you application are called  **wigdets**. Wigdets can do some actions: **events**.
+### Thinking in kivy
+Everything you build is drew on **canva** and every of screen in your app has its own **canva**. All the components, which you can put into your application are called  **wigdets**. Wigdets can do actions called **events**.
 
 At the beginning we create two files:
 First **simple_app_with_survey.py**
@@ -46,14 +47,18 @@ if __name__ == "__main__":
     MyApp().run()
 ```
 
-and second **simple_app_with_survey_layout.kv**, which stays empty and you will fill later.
+and second **simple_app_with_survey_layout.kv** which now you can leave empty and you will fill it later.
 
-This part will conduct to bind your .kv file file with a main code.
+```python
+Builder.load_file("simple_app_with_survey_layout.kv")
+```
+
+The result of the part above is binding your .kv file file with python code.
 
 ## First widget
-Now try to create a welcome page.
+Now try to create a Welcome Page.
 
-In simple_app_with_survey.py file you have to declare class for that. Pages in kivy applications are screen. Do not forget import this.
+In *simple_app_with_survey.py* file you have to declare class for Welcome Page. A page in kivy application is called **screen**.
 
 ```python
 from kivy.uix.screenmanager import Screen, ScreenManager
@@ -65,9 +70,9 @@ class WindowManager(ScreenManager):
     pass
 ```
 
-You do not have to implement any function inside this class now. Classes will contain functions if you want to implement additional behavior. 
+You do not have to implement any function inside this class now. Class will contain functions if you want to implement additional behavior. 
 
-In simple_app_with_survey_layout.kv the object declaration has to have the same name like the class. Only in that way kivy "knows" it is referenced to your class.
+In *simple_app_with_survey_layout.kv* the object declaration has to have the same name as the class. Only in that way kivy "knows" it is a reference to your class.
 
 ```python
 WindowManager:
@@ -83,12 +88,12 @@ WindowManager:
             on_press: app.stop()
 ```
 
-The size of the button cn be scaled if you change manually a size of app window. The reason is the sizes values mean percent of canva space. 
+The Widget's size is scalable. The button size is scaled automatically when you change a size of app window.
 
-Now your application have a button with event "close application" after clicked!
+Now your application has a button with "close application after clicked" event!
 
-I would like to say something more about layouts, before you will go to the next exercise.
-In above code you probably noticed "*BoxLayout*". Every screen can be done in different layout approach. Kivy gives you:
+Before you will go to the next exercise I would like to say something more about layouts.
+In the above code you probably noticed "*BoxLayout*". Every screen can be done in different layout approach. Kivy provides you the following:
 * AnchorLayout - Widgets can be anchored to the ‘top’, ‘bottom’, ‘left’, ‘right’ or ‘center’.
 * BoxLayout - Widgets are arranged sequentially, in either a ‘vertical’ or a ‘horizontal’ orientation.
 * FloatLayout - Widgets are essentially unrestricted.
@@ -100,14 +105,15 @@ In above code you probably noticed "*BoxLayout*". Every screen can be done in di
 
 ## Second page
 Let's assume you need information about name, surname, age and Python level.
-Call your second page as "SurveyPage". Add this part to *simple_app_with_survey.py*
+Call your second page "SurveyPage". Add below part to *simple_app_with_survey.py*:
 
 ```python
 class SurveyScreen(Screen):
     pass
 ```
 
-And in kivy file:
+and in kivy file:
+
 ```python
 <SurveyScreen>
     name: "surveyScreen"
@@ -122,10 +128,9 @@ And in kivy file:
             write_tab: False
 ``` 
 
-A results of setting parameter *write_tab* as False is that you forbid put tab into this field.
+A result of setting *write_tab* parameter to 'False' is a restriction of putting tab into this field.
 
-
-Also you would like to skip from welcome screen to survey page. 
+Also you would like to go from welcome screen to survey page. 
 At the beginning of *simple_app_with_survey_layout.kv* script add:
 
 ```python
@@ -149,11 +154,11 @@ and change *on_press* event:
                 app.root.current = "surveyScreen"
 ```
 
-For changing screen you use Screen *name*.
+Setting *app.root.current* parameter allows you to redirect to target screen (SurveyScreen). Please remember to use a *name* screen parameter as a value.
 
 You have just done your first multipages simple app!
 
-Adding additional field for your survey is quite easy. Change your SurveyScreen *simple_app_with_survey_layout.kv* file:
+Adding additional fields to your survey is quite easy. Change your SurveyScreen *simple_app_with_survey_layout.kv* file like this:
 
 ```python
 <SurveyScreen>
@@ -217,9 +222,9 @@ Adding additional field for your survey is quite easy. Change your SurveyScreen 
                     group: "python_experience"
 ```
 
-As you can see, you are able to nested Layouts (in this case BoxLayout) to adjust GUI for your needs.
-A few more words about above Wigedts:
-- Slider - min, max i step sounds clear, but you were able to set a value from and to text input below by:
+As you can see, you are able to nest Layouts (in this case BoxLayout) in order to adjust GUI for your needs.
+A few more words about used Widgets:
+- Slider - *min*, *max* and *step* sounds clear but you were able to set a value from and to TextInput Widget through:
 
 ```python
 value: int(age_as_txt.text)
@@ -231,22 +236,22 @@ and
 text: str(int(age.value))
 ```      
 
-*age_as_txt* and *age* are Wigdets ids, so you can call parameters in other object
+*age_as_txt* and *age* are Widgets ids, so you can call object parameters in other object.
    
-- ToggleButton - works like checkbox. You declare a group for all checks using *group:* parameter. If a user choose one value, later can not leave unchecked checkbox. You can force choose something trough setting a default value by putting *state: down* in one of ToggleButtons in particular group. 
+- ToggleButton - works like checkbox. You declare a group for all checks using *group:* parameter. If a user chooses one value, later it cannot leave an unchecked checkbox. You can enforce a user to choose something in checkbox through setting a default value by putting *state: down* in one of ToggleButtons in particular group. 
 
 
-Your app should looks like that:
+Your app should look like that:
 - WelcomeScreen:
 ![](../../assets/img/pictures/2020-02-21-Kivy_app_part1_welcome_screen.png)
 
 - SurveyScreen
 ![](../../assets/img/pictures/2020-02-21-Kivy_app_part1_survey_screen.png)
 
-If you are interested how to work with values from survey fields and write down them into a file please check 
-Multipages application with survey tutorial in Kivy (part 2)
+If you are interested in how to work with values from survey fields and write down them into a file please check 
+[Multipages application with survey tutorial in Kivy (part 2)]
 
 Whole script is available on my GitHub:
 [Simple application with survey](https://github.com/tkocza/Python_hints/tree/master/kivy)
 
-#### Thanks for reading
+#### Thanks for reading!
