@@ -103,7 +103,7 @@ defaults:
       breadcrumb:
         -
           label: Posts
-          url:
+          url: /
   -
     scope:
       path: _drafts
