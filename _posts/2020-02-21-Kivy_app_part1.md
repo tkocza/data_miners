@@ -5,7 +5,7 @@ categories: [Tutorials, kivy]
 tags: [Python, Kivy, GUI]
 toc: false
 seo:
-  date_modified: 2020-02-24 23:38:51 +0100
+  date_modified: 2020-02-27 20:05:23 +0100
 ---
 
 Kivy is one of the python libraries for building GUI. It is relatively new package but its community is still growing.  
