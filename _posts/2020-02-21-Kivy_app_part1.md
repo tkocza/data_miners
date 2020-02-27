@@ -1,6 +1,6 @@
 ---
 title: Multipages application with survey in Kivy (part 1)
-date: 2020-02-11 00:00:00 +0800
+date: 2020-02-21 00:00:00 +0100
 categories: [Tutorials, kivy]
 tags: [Python, Kivy, GUI]
 toc: false
