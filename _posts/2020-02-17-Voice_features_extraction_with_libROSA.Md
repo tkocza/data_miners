@@ -8,7 +8,7 @@ seo:
   date_modified: 2020-02-26 22:00:50 +0100
 ---
 
-LibROSA is a python package for music and audio analysis. It is  simple and powerful package which help you extract audio features for further analysis.
+LibROSA is a python package for music and audio analysis. It is  simple and powerful package which helps you extract audio features for further analysis.
 
 Before I will show you how easy is using this package, I would like to do a short introduction. It will be helpful if you want to work with audio.
 
