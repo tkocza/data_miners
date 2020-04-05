@@ -9,7 +9,7 @@ seo:
   date_modified: 2020-03-01 22:00:50 +0100
 ---
 
-In this post I would like to say something more about **distace metrics**, which are necessary to resolve Machine Learning problems.
+In this post I would like to say something more about **distance metrics**, which are necessary to resolve Machine Learning problems.
 If you want to understand how yours models works you cannot skip the distances.
  
 ## **Minkowski distance**
@@ -142,7 +142,7 @@ Try to compare two words: "SLEEP" and "KEEP"
 
 If you want to turn "sleep" into "keep" you need to do two changes: one insertion and one substitution.
 
-The Levenshtein distance for this 2.  
+The Levenshtein distance for this case is 2.  
 
 <br/>
 
