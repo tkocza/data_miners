@@ -2,7 +2,7 @@
 title: Voice features extraction with libROSA
 date: 2020-02-17 00:00:00 +0100
 categories: [Tutorials, libROSA]
-tags: [Python, audio]
+tags: [Python, Audio]
 toc: false
 seo:
   date_modified: 2020-02-26 22:00:50 +0100

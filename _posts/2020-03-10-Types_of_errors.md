@@ -14,7 +14,6 @@ We dream our model will put all of samples to proper classes.
 Why do we only dream? Because as people we will do mistakes and the same situation we have with algorithms.
 
 # Classification metrics
-
 The most often and base issue in Machine Learning is binary classification problem.
 In simple words you works with two outcome classes.
 
@@ -96,14 +95,11 @@ The ratio between precision and recall values.
 $$ F = \frac{PPV * TPR}{PPV + TPR} = \frac{precision * recall}{precision + recall} $$  
 
 ## **For what the measures should be used?**
-
 There is not one proper answer. Everything depends on the problems context.
-Try to image a few problems:  
-1) Is this message a spam?  (Class: spam, Not-in-class: important message)  
-2) Is this transaction a fraud?  (Class: fraud, Not-in-class: ordinary transaction)  
-3) Does someone have a serious disease?  (Class: disease, Not-in-class: health)  
-
-??? ## **Matthew's Correlation Coefficient (MCC)**
+Of course accuracy always tells how good is a model, but what to do when this measure for all tested models is similar?  
+Try to image a question:  Is this message spam?  (Class: spam, Not-in-class: important message)    
+Usually users prefer to have some important emails in spam section than more spam in inbox,
+so more False Positives and less False Negatives. Good comparison parameters here will be Fallout and Recall.
 
 ## **ROC curve**
 #### *Receiver Operating Characteristic*
@@ -116,11 +112,10 @@ The worst scenario is diagonal line what means taking completely random decision
 
 ![](../../assets/img/pictures/2020-03-10-Types_of_errors_ROC.png)
 
-## **R²**
-#### *Coefficient of determination*
 
-## **Probability** / p-value
-For multiclassification 
+[comment]: # ## **R²**
+[comment]: # #### *Coefficient of determination*
+
 
 # **Regression metrics**
 While solving prediction problems we will receive a numerical data as an output.
